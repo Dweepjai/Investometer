@@ -1,0 +1,468 @@
+@font-face {
+    font-family: 'Gilroy';
+    src: url('font/Gilroy-Regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy Bold';
+    src: url('font/Gilroy-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body{
+    background-color: rgb(22, 22, 24);
+    font-family: 'Gilroy';
+}
+.active {
+    opacity: 1 !important;
+}
+*{
+    font-family: 'Gilroy';
+    list-style: none;
+    text-decoration: none;
+    -webkit-user-select: none;      
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* REMOVE SPINNERS FROM NUMBER INPUT */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.investment-container{
+    position: absolute;
+    width: 360px;
+    height: 780px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #072449;
+}
+
+.investment-container .app-title{
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+.investment-container .app-title a{
+    color: #FFF;
+}
+.investment-container .app-title a b{
+    font-family: 'Gilroy Bold';
+}
+
+.investment-header .balance{
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+.investment-header .balance .title{
+    color: #FFF;
+    font-size: 1em;
+    font-family: 'Gilroy Bold';
+}
+
+.investment-header .balance .value{
+    color: #FFF;
+    font-size: 2em;
+    margin-top: 10px;
+    font-family: 'Gilroy Bold';
+}
+
+.investment-header .account{
+    display: block;
+    width: 310px;
+    margin: 35px auto 0;
+    line-height: 1.7em;
+    text-align: center;
+    
+}
+
+.investment-header .account .equity, .chart, .crypto-currency{
+    height: 50px;
+    display: inline-block;
+    width: 100px;
+    vertical-align: middle;
+}
+
+.investment-header .account .equity .title{
+    color: #FFF;
+    opacity: 0.5;
+}
+.investment-header .account .equity .equity-total{
+    color: #FFF;
+    font-family: 'Gilroy Bold';
+}
+
+.investment-header .account .crypto-currency .title{
+    color: #FFF;
+    opacity: 0.5;
+}
+.investment-header .account .crypto-currency .crypto-total{
+    color: #F0624D;
+    font-family: 'Gilroy Bold';
+}
+
+/*/////////////   DASHBOARD    /////////////*/
+.investment-dashboard{
+    display: block;
+    width: 360px;
+    height: 470px;
+    background-color: #FFF;
+    margin-top: 35px;
+    border-radius: 30px 30px 0 0;
+}
+
+.investment-dashboard .dash-title{
+    display: inline-block;
+    color: #1a0034;
+    font-size: 1.7em;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-family: 'Gilroy Bold';
+}
+
+.toggle{
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.toggle .tab1, .tab2, .tab3{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #1a0034;
+    font-family: 'Gilroy Bold';
+    opacity: 0.4;
+}
+
+.toggle .tab2, .tab3{
+    margin-left: 10px;
+}
+
+.focus{
+    opacity : 1 !important;
+}
+
+.hide{
+    display: none;
+}
+
+.investment-dashboard input{
+    /* MAKE INPUT SELECTABLE */
+    -webkit-user-select: auto;      
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}
+
+/* ////////// ALL ///////////// */
+.investment-dashboard #{
+    width: 360px;
+    height: 339px;
+    position: relative;
+}
+.investment-dashboard #all ul{
+    width: 360px;
+    height: 325px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top:20px;
+    overflow-x: auto;
+}
+
+.investment-dashboard #all ul.list li{
+    position: relative;
+    font-size: 1em;
+}
+
+.investment-dashboard #all ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.investment-dashboard #all ul.list li .entry{
+    width:250px;
+    height: auto;
+    padding-left: 20px;
+    margin-bottom: 10px;;
+    word-wrap: break-word;
+    font-family: 'Gilroy Bold';
+}
+
+.investment-dashboard #all ul.list li #edit{
+    visibility: hidden;
+}
+
+.investment-dashboard #all ul.list li #delete{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-image: url('icon/trash.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.investment-dashboard #all ul.list li.crypto{
+    color:   #F0624D;
+}
+.investment-dashboard #all ul.list li.equity{
+}
+
+/* //////// EQUITY ////////// */
+.investment-dashboard #equity{
+    width: 360px;
+    height: 339px;
+    position: relative;
+}
+
+.investment-dashboard #equity .input{
+    position: absolute;
+    display: block;
+    width: 360px;
+    bottom: 0;
+    border-top: 1px solid #ccc;
+}
+
+.investment-dashboard #equity .input *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.investment-dashboard #crypto .input * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.investment-dashboard #equity .input input#equity-title-input{
+    height: 40px;
+    width : 330px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family: 'Gilroy';
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    text-align: center;
+}
+.investment-dashboard #equity .input input#equity-exchange-input{
+    height: 40px;
+    width : 150px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family: 'Gilroy';
+    margin: 5px;
+    margin-left: 3px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+.investment-dashboard #crypto .input input#crypto-exchange-input{
+    height: 40px;
+    width : 150px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family: 'Gilroy';
+    margin: 5px;
+    margin-left: 3px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+
+.investment-dashboard #equity .input input#equity-amount-input{
+    height: 40px;
+    width : 110px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family: 'Gilroy';
+    margin: 5px;
+    margin-left: 0px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+}
+
+.investment-dashboard #equity .input .add-equity img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.investment-dashboard #equity ul{
+    width: 360px;
+    height: 242px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top:20px;
+    overflow-x: auto;
+}
+
+.investment-dashboard #equity ul.list li{
+    position: relative;
+    font-size: 1em;
+}
+
+.investment-dashboard #equity ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.investment-dashboard #equity ul.list li .entry{
+    width:250px;
+    height: auto;
+    padding-left: 20px;
+    margin-bottom: 10px;;
+    word-wrap: break-word;
+    font-family: 'Gilroy Bold';
+}
+
+.investment-dashboard #equity ul.list li #edit{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    right: 50px;
+    cursor: pointer;
+    background-image: url("icon/edit.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.investment-dashboard #equity ul.list li #delete{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-image: url('icon/trash.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+/* /////// INCOME //////// */
+.investment-dashboard #crypto{
+    width: 360px;
+    height: 339px;
+    position: relative;
+}
+
+.investment-dashboard #crypto .input{
+    position: absolute;
+    display: block;
+    width: 360px;
+    bottom: 0;
+    border-top: 1px solid #ccc;
+}
+
+.investment-dashboard .equity .input *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.investment-dashboard #crypto .input input#crypto-title-input{
+    height: 40px;
+    width : 330px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family: 'Gilroy';
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    text-align: center;
+}
+
+.investment-dashboard #crypto .input input#crypto-amount-input{
+    height: 40px;
+    width : 110px;
+    padding-left: 10px;
+    font-size: 1.2em;
+    font-family: 'Gilroy';
+    margin: 5px;
+    margin-left: 0px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+}
+
+.investment-dashboard #crypto .input .add-crypto img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.investment-dashboard #crypto ul{
+    width: 360px;
+    height: 242px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top:20px;
+    overflow-x: auto;
+}
+
+.investment-dashboard #crypto ul.list li{
+    position: relative;
+    font-size: 1em;
+}
+
+.investment-dashboard #crypto ul.list li *{
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.investment-dashboard #crypto ul.list li .entry{
+    width:250px;
+    height: auto;
+    padding-left: 20px;
+    margin-bottom: 10px;;
+    word-wrap: break-word;
+    font-family: 'Gilroy Bold';
+    color: #F0624D;
+}
+
+.investment-dashboard #crypto ul.list li #edit{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    right: 50px;
+    cursor: pointer;
+    background-image: url("icon/edit.png");
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.investment-dashboard #crypto ul.list li #delete{
+    position: absolute;
+    width:20px;
+    height: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-image: url('icon/trash.png');
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.text{
+    font-size: large;
+}
+.colon{
+    color: #0c0202;
+    font-size: larger;
+}
