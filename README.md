@@ -1,1 +1,1 @@
-Link- https://investometer.herokuapp.com/
+Link- https://investometer.netlify.app/
